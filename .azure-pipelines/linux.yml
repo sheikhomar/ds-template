@@ -6,7 +6,7 @@ trigger:
 stages:
   - stage: Build
     jobs:
-    - job: qa
+    - job: Initial_Checks
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
@@ -20,3 +20,20 @@ stages:
           pre-commit install -f --install-hooks
           pre-commit run --all-files
         displayName: Perform pre-commit checks on all files.
+    - job: Unit_Tests
+      pool:
+        vmImage: 'ubuntu-16.04'
+      steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.7'
+          addToPath: true
+          architecture: 'x64'
+      - script: |
+          curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+          source $HOME/.poetry/env
+          poetry install
+          echo "##vso[task.prependpath]$HOME/.poetry/bin"
+        displayName: Install tools and dependencies.
+      - script: poetry run pytest
+        displayName: Run tests.
