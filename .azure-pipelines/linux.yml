@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include:
+      - master
+
+stages:
+  - stage: Build
+    jobs:
+    - job: quality-assurance
+      pool:
+        vmImage: 'ubuntu-16.04'
+      steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.7'
+          addToPath: true
+          architecture: 'x64'
+      - script: |
+          pip install pre-commit
+          pre-commit install -f --install-hooks
+          pre-commit run --all-files
+        displayName: Perform pre-commit checks on all files.
