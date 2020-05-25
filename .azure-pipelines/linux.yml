@@ -21,6 +21,7 @@ stages:
           pre-commit run --all-files
         displayName: Perform pre-commit checks on all files.
     - job: Unit_Tests
+      dependsOn: Initial_Checks
       pool:
         vmImage: 'ubuntu-16.04'
       steps:
