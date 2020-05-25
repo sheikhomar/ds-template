@@ -1,6 +1,6 @@
 # Data Science Project Template
 
-A template repository for data science projects. 
+A template repository for data science projects.
 
 The file organisation is based losely on [TDSP Project Structure](https://github.com/Azure/Azure-TDSP-ProjectTemplate) and [CookieCutter Data Science](https://github.com/drivendata/cookiecutter-data-science/).
 
@@ -23,4 +23,8 @@ The file organisation is based losely on [TDSP Project Structure](https://github
 5. Install dependencies
    ```bash
    poetry install
+   ```
+6. Install the pre-commit Git hooks:
+   ```bash
+   poetry run pre-commit install
    ```
