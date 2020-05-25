@@ -10,6 +10,28 @@ repos:
   - id: black
     name: Format code (black)
 
+- repo: https://github.com/asottile/seed-isort-config
+  rev: v2.1.1
+  hooks:
+  - id: seed-isort-config
+    name: Configure isort.
+
+- repo: https://github.com/timothycrosley/isort
+  rev: 4.3.21
+  hooks:
+  - id: isort
+    name: Sort dependencies (isort)
+    files: \.py$
+    additional_dependencies: ['toml']
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v0.770
+  hooks:
+  - id: mypy
+    name: Static type checker (mypy)
+    exclude: docs|tests
+    args: ["--pretty"]
+
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v2.4.0
   hooks:
@@ -21,24 +43,3 @@ repos:
   - id: check-merge-conflict
   - id: flake8
     additional_dependencies: ['flake8-docstrings', 'darglint']
-
-- repo: https://github.com/asottile/seed-isort-config
-  rev: v2.1.1
-  hooks:
-  - id: seed-isort-config
-    name: Configure isort.
-
-- repo: https://github.com/timothycrosley/isort
-  rev: 4.3.21
-  hooks:
-  - id: isort
-    name: Sort imports in Python scripts (isort)
-    files: \.py$
-
-- repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.770
-  hooks:
-  - id: mypy
-    name: Static type checker (mypy)
-    exclude: docs|tests
-    args: ["--pretty"]
