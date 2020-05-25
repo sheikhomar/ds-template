@@ -12,7 +12,7 @@ stages:
       steps:
       - task: UsePythonVersion@0
         inputs:
-          versionSpec: '3.7'
+          versionSpec: '3'
           addToPath: true
           architecture: 'x64'
       - script: |
@@ -24,10 +24,17 @@ stages:
       dependsOn: Initial_Checks
       pool:
         vmImage: 'ubuntu-16.04'
+      strategy:
+        matrix:
+          "python-3.7": # Supported version
+            python.version: '3.7'
+            python.architecture: x64
+          "python-3.8": # Latest version
+            python.version: '3.8'
       steps:
       - task: UsePythonVersion@0
         inputs:
-          versionSpec: '3.7'
+          versionSpec: '3'
           addToPath: true
           architecture: 'x64'
       - script: |
