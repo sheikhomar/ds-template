@@ -192,19 +192,19 @@ six = "*"
 
 [[package]]
 name = "pandas"
-version = "1.0.4"
+version = "1.2.5"
 description = "Powerful data structures for data analysis, time series, and statistics"
 category = "main"
 optional = false
-python-versions = ">=3.6.1"
+python-versions = ">=3.7.1"
 
 [package.dependencies]
-numpy = ">=1.13.3"
-python-dateutil = ">=2.6.1"
-pytz = ">=2017.2"
+numpy = ">=1.16.5"
+python-dateutil = ">=2.7.3"
+pytz = ">=2017.3"
 
 [package.extras]
-test = ["pytest (>=4.0.2)", "pytest-xdist", "hypothesis (>=3.58)"]
+test = ["pytest (>=5.0.1)", "pytest-xdist", "hypothesis (>=3.58)"]
 
 [[package]]
 name = "pluggy"
@@ -428,7 +428,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "bc8536aef4498807eb58c141a5b1efd2ece314843e6bc096f5b8f3e011ab4326"
+content-hash = "15930d0aa642dba54a5d86d1fac69f8e340228749765c274687a3280612eb2f6"
 
 [metadata.files]
 appdirs = [
@@ -559,22 +559,24 @@ packaging = [
     {file = "packaging-20.4.tar.gz", hash = "sha256:4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"},
 ]
 pandas = [
-    {file = "pandas-1.0.4-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:1f6fcf0404626ca0475715da045a878c7062ed39bc859afc4ccf0ba0a586a0aa"},
-    {file = "pandas-1.0.4-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:bab51855f8b318ef39c2af2c11095f45a10b74cbab4e3c8199efcc5af314c648"},
-    {file = "pandas-1.0.4-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:2a8b6c28607e3f3c344fe3e9b3cd76d2bf9f59bc8c0f2e582e3728b80e1786dc"},
-    {file = "pandas-1.0.4-cp36-cp36m-win32.whl", hash = "sha256:034185bb615dc96d08fa13aacba8862949db19d5e7804d6ee242d086f07bcc46"},
-    {file = "pandas-1.0.4-cp36-cp36m-win_amd64.whl", hash = "sha256:a647e44ba1b3344ebc5991c8aafeb7cca2b930010923657a273b41d86ae225c4"},
-    {file = "pandas-1.0.4-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:698e26372dba93f3aeb09cd7da2bb6dd6ade248338cfe423792c07116297f8f4"},
-    {file = "pandas-1.0.4-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:2bc2ff52091a6ac481cc75d514f06227dc1b10887df1eb72d535475e7b825e31"},
-    {file = "pandas-1.0.4-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:519678882fd0587410ece91e3ff7f73ad6ded60f6fcb8aa7bcc85c1dc20ecac6"},
-    {file = "pandas-1.0.4-cp37-cp37m-win32.whl", hash = "sha256:51e0abe6e9f5096d246232b461649b0aa627f46de8f6344597ca908f2240cbaa"},
-    {file = "pandas-1.0.4-cp37-cp37m-win_amd64.whl", hash = "sha256:415e4d52fcfd68c3d8f1851cef4d947399232741cc994c8f6aa5e6a9f2e4b1d8"},
-    {file = "pandas-1.0.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:0c9b7f1933e3226cc16129cf2093338d63ace5c85db7c9588e3e1ac5c1937ad5"},
-    {file = "pandas-1.0.4-cp38-cp38-manylinux1_i686.whl", hash = "sha256:982cda36d1773076a415ec62766b3c0a21cdbae84525135bdb8f460c489bb5dd"},
-    {file = "pandas-1.0.4-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:29b4cfee5df2bc885607b8f016e901e63df7ffc8f00209000471778f46cc6678"},
-    {file = "pandas-1.0.4-cp38-cp38-win32.whl", hash = "sha256:1fc963ba33c299973e92d45466e576d11f28611f3549469aec4a35658ef9f4cc"},
-    {file = "pandas-1.0.4-cp38-cp38-win_amd64.whl", hash = "sha256:83af85c8e539a7876d23b78433d90f6a0e8aa913e37320785cf3888c946ee874"},
-    {file = "pandas-1.0.4.tar.gz", hash = "sha256:b35d625282baa7b51e82e52622c300a1ca9f786711b2af7cbe64f1e6831f4126"},
+    {file = "pandas-1.2.5-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:1102d719038e134e648e7920672188a00375f3908f0383fd3b202fbb9d2c3a95"},
+    {file = "pandas-1.2.5-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:38e7486410de23069392bdf1dc7297ae75d2d67531750753f3149c871cd1c6e3"},
+    {file = "pandas-1.2.5-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:94ca6ea3f46f44a979a38a4d5a70a88cee734f7248d7aeeed202e6b3ba485af1"},
+    {file = "pandas-1.2.5-cp37-cp37m-win32.whl", hash = "sha256:821d92466fcd2826656374a9b6fe4f2ec2ba5e370cce71d5a990577929d948df"},
+    {file = "pandas-1.2.5-cp37-cp37m-win_amd64.whl", hash = "sha256:0dbd125b0e44e5068163cbc9080a00db1756a5e36309329ae14fd259747f2300"},
+    {file = "pandas-1.2.5-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7b09293c7119ab22ab3f7f086f813ac2acbfa3bcaaaeb650f4cddfb5b9fa9be4"},
+    {file = "pandas-1.2.5-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:fc9215dd1dd836ff26b896654e66b2dfcf4bbb18aa4c1089a79bab527b665a90"},
+    {file = "pandas-1.2.5-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:e36515163829e0e95a6af10820f178dd8768102482c01872bff8ae592e508e58"},
+    {file = "pandas-1.2.5-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:0c34b89215f984a9e4956446e0a29330d720085efa08ea72022387ee37d8b373"},
+    {file = "pandas-1.2.5-cp38-cp38-win32.whl", hash = "sha256:f20e4b8a7909f5a0c0a9e745091e3ea18b45af9f73496a4d498688badbdac7ea"},
+    {file = "pandas-1.2.5-cp38-cp38-win_amd64.whl", hash = "sha256:9244fb0904512b074d8c6362fb13aac1da6c4db94372760ddb2565c620240264"},
+    {file = "pandas-1.2.5-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:c862cd72353921c102166784fc4db749f1c3b691dd017fc36d9df2c67a9afe4e"},
+    {file = "pandas-1.2.5-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d9e6edddeac9a8e473391d2d2067bb3c9dc7ad79fd137af26a39ee425c2b4c78"},
+    {file = "pandas-1.2.5-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a67227e17236442c6bc31c02cb713b5277b26eee204eac14b5aecba52492e3a3"},
+    {file = "pandas-1.2.5-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:4bfbf62b00460f78a8bc4407112965c5ab44324f34551e8e1f4cac271a07706c"},
+    {file = "pandas-1.2.5-cp39-cp39-win32.whl", hash = "sha256:25fc8ef6c6beb51c9224284a1ad89dfb591832f23ceff78845f182de35c52356"},
+    {file = "pandas-1.2.5-cp39-cp39-win_amd64.whl", hash = "sha256:78de96c1174bcfdbe8dece9c38c2d7994e407fd8bb62146bb46c61294bcc06ef"},
+    {file = "pandas-1.2.5.tar.gz", hash = "sha256:14abb8ea73fce8aebbb1fb44bec809163f1c55241bcc1db91c2c780e97265033"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
